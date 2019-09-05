@@ -14,6 +14,10 @@ group :production do
   gem 'pg'
 end
 
+group :development do
+  gem 'pg'
+end
+
 group :development, :test do
   gem 'byebug', platform: :mri
 end
