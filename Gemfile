@@ -16,11 +16,10 @@ end
 
 group :development do
   gem 'pg'
-  gem 'byebug'
 end
 
-group :test do
-
+group :development, :test do
+  gem 'byebug', platform: :mri
 end
 
 group :development do
@@ -36,7 +35,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'bootstrap-sass'
 gem 'simple_form'
-#gem 'faker'
+gem 'faker'
 
 gem 'fullcalendar-rails'
 gem 'momentjs-rails'
