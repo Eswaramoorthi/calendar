@@ -40,4 +40,12 @@ gem 'faker'
 gem 'fullcalendar-rails'
 gem 'momentjs-rails'
 gem 'pg'
-gem 'coffee-rails', '~> 4.1'
+gem 'coffee-rails', '~> 5.0'
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-fullcalendar'
+  gem 'rails-assets-momentjs'
+end
+
+gem 'ice_cube'
+
