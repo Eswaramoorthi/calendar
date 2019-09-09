@@ -31,6 +31,7 @@ class RecurringEventsController < ApplicationController
   def destroy
     @recurring_event.destroy
   end
+  
 
   private
   
