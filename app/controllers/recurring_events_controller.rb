@@ -1,17 +1,17 @@
 class RecurringEventsController < ApplicationController
   before_action :set_recurring_event, only: [:show, :edit, :update, :destroy]
 
+  def new
+    @recurring_event = RecurringEvent.new
+  end
+  
   def index
     @recurring_events = RecurringEvent.all
   end
 
   def show
   end
-
-  def new
-    @recurring_event = RecurringEvent.new
-  end
-
+  
   def edit
   end
 
@@ -31,7 +31,7 @@ class RecurringEventsController < ApplicationController
   def destroy
     @recurring_event.destroy
   end
-  
+
 
   private
   

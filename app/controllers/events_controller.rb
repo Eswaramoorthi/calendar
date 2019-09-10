@@ -1,15 +1,15 @@
 class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
 
+  def new
+    @event = Event.new
+  end
+
   def index
     @events = Event.where(start: params[:start]..params[:end])
   end
 
   def show
-  end
-
-  def new
-    @event = Event.new
   end
 
   def edit
