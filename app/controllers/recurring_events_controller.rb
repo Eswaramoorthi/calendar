@@ -7,12 +7,15 @@ class RecurringEventsController < ApplicationController
   
   def index
     @recurring_events = RecurringEvent.all
+    #binding.pry
   end
 
   def show
+    #@recurring_event = RecurringEvent.find(params[:id])
   end
   
   def edit
+
   end
 
   def create
@@ -21,6 +24,7 @@ class RecurringEventsController < ApplicationController
   end
 
   def update
+    #binding.pry
     if params[:event]
       @recurring_event.update(anchor: params[:event][:start])
     else
@@ -40,7 +44,7 @@ class RecurringEventsController < ApplicationController
   end
 
   def recurring_event_params
-    params.require(:recurring_event).permit(:title, :anchor, :frequency, :color)
+    params.require(:recurring_event).permit(:title, :anchor, :frequency, :color, :end_date)
   end
 end
 

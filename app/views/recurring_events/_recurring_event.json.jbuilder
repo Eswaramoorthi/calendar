@@ -1,4 +1,5 @@
-events = recurring_event.events(params[:start], params[:end])
+events = recurring_event.events(params[:anchor], params[:end_date])
+#binding.pry
 json.array! events do |event|
   json.id "recurring_#{recurring_event.id}"
   json.title recurring_event.title

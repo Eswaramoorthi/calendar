@@ -49,3 +49,5 @@ end
 
 gem 'ice_cube'
 
+gem 'pry'
+
