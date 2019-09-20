@@ -9,7 +9,8 @@
 
   <div class="form-actions">
     <%= f.button :submit %>
-    <%= f.submit "update all events" %>
+    <%= f.submit "update all events"  if params[:action] == 'edit' %>
+    <%#= f.submit "update all events" %>
     <%= link_to 'New Recurring Event', 
                 new_recurring_event_path,
                 class: 'btn btn-default', 
