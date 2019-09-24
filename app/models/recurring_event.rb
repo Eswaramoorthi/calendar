@@ -28,7 +28,7 @@ class RecurringEvent < ApplicationRecord
 
   def event_dates(start_date, end_date)
     start_frequency = start_date ? start_date.to_date : Date.today - 1.year
-    end_frequency = end_date ? end_date.to_date : Date.today + 1.year
+    end_frequency = end_date ? end_date.to_date : Date.today - 1.year
     schedule.occurrences_between(start_frequency, end_frequency)
   end
 

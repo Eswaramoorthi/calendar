@@ -1,6 +1,6 @@
 json.array! @events do |event|
 	#binding.pry
-  date_format = event.all_day_event? ? '%Y-%m-%d' : '%Y-%m-%dT%H:%M:%S'
+  date_format = event.all_day_event? ? '%Y-%m-%d' : '%Y-%m-%d'
   #binding.pry
   json.id event.id
   json.title event.title
